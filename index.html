@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designações Mensais</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+
+    <h1>Designações Mensais</h1>
+    <p class="center-text">Selecione o mês/ano e clique em "Carregar Datas" para ver os campos.</p>
+
+    <div class="container">
+
+        <fieldset>
+            <legend>Selecionar Período</legend>
+            <div class="input-group month-year-selector">
+                <div>
+                    <label for="select_month">Mês:</label>
+                    <select id="select_month" name="select_month">
+                        <option value="0">Janeiro</option>
+                        <option value="1">Fevereiro</option>
+                        <option value="2">Março</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Maio</option>
+                        <option value="5">Junho</option>
+                        <option value="6">Julho</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Setembro</option>
+                        <option value="9">Outubro</option>
+                        <option value="10">Novembro</option>
+                        <option value="11">Dezembro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="select_year">Ano:</label>
+                    <select id="select_year" name="select_year">
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025" selected>2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                    </select>
+                </div>
+                <button id="loadDatesBtn">Carregar Datas</button>
+            </div>
+        </fieldset>
+
+        <fieldset id="fs-designacoes">
+            <legend>Designações de Áudio e Vídeo</legend>
+            <div id="designacoes-container" class="dynamic-table-container">
+                <p><em>Selecione o Período e clique em "Carregar Datas".</em></p>
+            </div>
+        </fieldset>
+
+        <fieldset id="fs-reuniao-publica">
+            <legend>Reunião Pública</legend>
+            <div id="reuniao-publica-container" class="dynamic-table-container">
+                 <p><em>As informações da Reunião Pública aparecerão aqui após carregar as datas.</em></p>
+            </div>
+        </fieldset>
+
+        <fieldset id="fs-limpeza-reuniao">
+            <legend>Limpeza após a reunião</legend>
+            <div id="limpeza-apos-reuniao-container" class="dynamic-table-container">
+                 <p><em>Os grupos responsáveis pela limpeza aparecerão aqui após carregar as datas.</em></p>
+            </div>
+        </fieldset>
+
+        <fieldset id="fs-limpeza-semanal">
+            <legend>Limpeza Semanal</legend>
+            <div id="limpeza-semanal-container" class="dynamic-table-container">
+                 <p><em>As congregações/grupos responsáveis pela limpeza semanal aparecerão aqui após carregar as datas.</em></p>
+            </div>
+        </fieldset>
+
+        <button id="gerarPdfBtn">Gerar PDF</button>
+
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>

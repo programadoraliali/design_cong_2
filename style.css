@@ -1,0 +1,273 @@
+/* Estilos Gerais */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #212529;
+    font-size: 16px; /* Base font size */
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+p.center-text {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #dee2e6;
+}
+
+fieldset {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+legend {
+    font-weight: 600;
+    color: #495057;
+    padding: 0 10px;
+    font-size: 1.1em;
+}
+
+/* Grupo de Inputs e Labels Gerais */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 5px; /* Espaço entre label e input */
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Seletor de Mês/Ano */
+.month-year-selector {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.month-year-selector > div {
+    flex: 1;
+    min-width: 150px;
+}
+.month-year-selector label {
+    margin-bottom: 3px;
+    font-size: 0.85em;
+}
+.month-year-selector button {
+    flex-shrink: 0; /* Impede que o botão encolha */
+    margin-bottom: 1px; /* Alinha base do botão com inputs */
+}
+
+/* --- Estilos para Containers e Linhas Dinâmicas --- */
+.dynamic-table-container {
+    margin-top: 15px;
+}
+
+.dynamic-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    border-bottom: 1px solid #e9ecef;
+    padding: 15px 5px;
+    flex-wrap: nowrap;
+}
+@media (max-width: 700px) {
+    .dynamic-row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+.dynamic-row:last-child {
+    border-bottom: none;
+}
+
+.dynamic-date {
+    font-weight: 600;
+    min-width: 100px;
+    flex-shrink: 0;
+    color: #007bff;
+    padding-top: 12px;
+    text-align: right;
+    margin-right: 5px;
+    font-size: 0.95em;
+}
+@media (max-width: 700px) {
+     .dynamic-date {
+         min-width: 100%;
+         text-align: left;
+         padding-top: 0;
+         margin-bottom: 8px;
+         color: #495057;
+         border-bottom: 1px dashed #eee;
+         padding-bottom: 8px;
+         font-size: 1em;
+     }
+}
+
+.dynamic-inputs-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.inputs-row.limpeza-inputs .input-wrapper { /* Para T3 e T4, se quiser que ocupem mais espaço */
+    min-width: 220px; /* Ajuste conforme necessário */
+}
+
+.input-wrapper {
+     flex: 1;
+     min-width: 160px;
+}
+.input-wrapper.tema-wrapper {
+    flex-basis: 100%;
+    min-width: 90%;
+}
+
+.dynamic-inputs-container label {
+     display: block;
+     font-size: 0.85em;
+     font-weight: 500;
+     color: #495057;
+     margin-bottom: 4px;
+}
+
+.dynamic-table-container p em {
+    font-size: 0.9em;
+    color: #6c757d;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px dashed #ced4da;
+}
+
+/* --- Botões --- */
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+button:hover {
+    opacity: 0.9; /* O padrão, pode ser sobrescrito por botões específicos */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+button:active {
+     opacity: 1; /* O padrão, pode ser sobrescrito por botões específicos */
+     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Botão Carregar Datas */
+#loadDatesBtn {
+     background-color: #6c757d;
+}
+#loadDatesBtn:hover {
+     background-color: #5a6268;
+     opacity: 1; /* Garante que não fique transparente devido ao button:hover geral */
+}
+#loadDatesBtn:active {
+    background-color: #545b62; /* Cor ligeiramente mais escura para active */
+    opacity: 1;
+}
+
+
+/* Botão Gerar PDF Principal - ATUALIZADO E COMPLETO */
+#gerarPdfBtn {
+    display: block;
+    width: 100%;
+    padding: 12px 15px; /* Ajustado para 12px topo/baixo, 15px esq/dir */
+    background-color: #28a745; /* Verde */
+    color: white; /* Adicionado */
+    border: none; /* Herdado, mas explícito para clareza */
+    border-radius: 5px; /* Herdado, mas explícito para clareza */
+    font-size: 1.1rem;
+    cursor: pointer; /* Herdado, mas explícito para clareza */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease; /* Adicionado */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Adicionado */
+    margin-top: 25px;
+    margin-bottom: 10px; /* Adicionado */
+}
+
+#gerarPdfBtn:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adicionado */
+    opacity: 1; /* Garante que não fique transparente */
+}
+
+#gerarPdfBtn:active {
+     background-color: #1e7e34; /* Verde ainda mais escuro no active */
+     box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Adicionado */
+     opacity: 1; /* Garante que não fique transparente */
+}
+
+
+/* Estilos para Tabela 3 e 4 (Limpeza) - Opcional */
+/* Se você quiser que os campos de 'grupo' ou 'responsavel' sejam mais largos */
+#limpeza-apos-reuniao-container .inputs-row.limpeza-inputs .input-wrapper,
+#limpeza-semanal-container .inputs-row.limpeza-inputs .input-wrapper {
+    flex-grow: 1; /* Permite que o input cresça */
+    min-width: 250px; /* Ajuste conforme o necessário para ocupar mais espaço */
+}
+
+/* Pode ser necessário ajustar o container se houver apenas um campo.
+   A classe .limpeza-inputs foi adicionada ao .inputs-row no JS
+   para T3 e T4 para permitir estilização específica se eles tiverem poucos campos.
+*/
+.inputs-row.limpeza-inputs {
+    /* Se houver apenas um .input-wrapper, ele já ocupará todo o espaço devido ao flex:1
+       no .input-wrapper. Mas pode-se adicionar estilos aqui se necessário. */
+}
